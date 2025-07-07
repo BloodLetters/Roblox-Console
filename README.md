@@ -4,9 +4,9 @@ Tired with roblox Console with much layered gui in screen?
 ## How to Create .exe File
 ### Method 1: Using Build Script (Recommended)
 1. Open Command Prompt or PowerShell
-2. Navigate to project folder: `cd "c:\Users\Ashesh\Project\Roblox-Console"`
+2. clone this project
 3. Run: `build.bat`
-4. The .exe file will be available in `dist\RobloxConsole.exe` folder
+4. The .exe file will be available in `dist\Console.exe` folder
 
 ### Method 2: Manual with PyInstaller
 1. Install dependencies:
@@ -16,14 +16,14 @@ Tired with roblox Console with much layered gui in screen?
 
 2. Build with spec file:
     ```
-    pyinstaller RobloxConsole.spec
+    pyinstaller Build.spec
     ```
 
-3. The .exe file will be available at `dist\RobloxConsole.exe`
+3. The .exe file will be available at `dist\Console.exe`
 
 ## How to Run the .exe File
 
-1. Double-click `RobloxConsole.exe` or run from command prompt
+1. Double-click `Console.exe` or run from command prompt
 2. Terminal will open showing server status
 3. Server will run on `https://localhost:7243` (default)
 4. Press `Ctrl+C` to stop the server
