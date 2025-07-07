@@ -8,6 +8,8 @@ a = Analysis(
     binaries=[],
     datas=[
         ('config.json', '.'),
+        ('script', 'script'),
+        ('script/source.lua', 'script'),
     ],
     hiddenimports=[
         'module.rest',
@@ -56,5 +58,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=None,
+    icon='assets/icon.ico',
 )

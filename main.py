@@ -51,7 +51,7 @@ if __name__ == "__main__":
     
     cleaner()
     banner()
-    protocol = "HTTPS" if use_ssl else "HTTP"
+    protocol = "https" if use_ssl else "http"
     print(f"✓ Server running on {protocol}://localhost:{port}")
     print(f"✓ API endpoint: {protocol}://localhost:{port}/api")
     print(" ")
