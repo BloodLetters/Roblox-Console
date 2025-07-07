@@ -24,7 +24,7 @@ function parsingType(type)
 end
 
 local function sendLogToServer(logMessage, messageType)
-    local url = 'http://127.0.0.1:7243/console'
+    local url = 'http://127.0.0.1:7243/api'
 
     local body = HttpService:JSONEncode({
         type = parsingType(messageType) or 'Info',
