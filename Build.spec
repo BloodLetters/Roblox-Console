@@ -6,9 +6,6 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[
-        ('config.json', '.'),
-    ],
     hiddenimports=[
         'module.rest',
         'module.cert', 
