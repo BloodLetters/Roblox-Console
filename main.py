@@ -43,7 +43,8 @@ if __name__ == "__main__":
             cert.generateCert(cert_file, key_file)
         else:
             print("SSL certificates found.")
-    
+
+    config.create_source()
     server_thread = threading.Thread(target=startServer, args=(port, use_ssl))
     server_thread.daemon = True
     server_thread.start()

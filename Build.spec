@@ -8,8 +8,6 @@ a = Analysis(
     binaries=[],
     datas=[
         ('config.json', '.'),
-        ('script', 'script'),
-        ('script/source.lua', 'script'),
     ],
     hiddenimports=[
         'module.rest',
