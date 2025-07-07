@@ -27,23 +27,9 @@ jobs:
     - name: Build with PyInstaller
       run: pyinstaller Build.spec
     
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
+    - name: Create Release and
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        draft: false
-        prerelease: false
-    
-    - name: Upload Executable
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./dist/
-        asset_name: build-artifacts
-        asset_content_type: application/zip
+      run: |
+        Compress-Archive -Path ./dist/* -DestinationPath ./Release.zip
+        gh release create ${{ github.ref_name }} ./Release.zip --title "Release ${{ github.ref_name }}" --notes "Automated release for ${{ github.ref_name }}"
